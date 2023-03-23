@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkmode con Javascript</title>
+    <script type="text/javascript" src="./js/calificacion.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <nav>
+            <a class="logotipo" href="#">Miguel Ortiz Vazquez</a>
+            <div class="enlaces">
+                <a href="practica1.html">Practica 1</a>
+                <a href="practica2.html">Practica 2</a>
+                <a href="practica3.html">Practica 3</a>
+                <button id="bdark">Modo oscuro</button>
+            </div>
+        </nav>
+
+        <section>
+            <br><br>
+            <form name="frm" method="post">
+                <fieldset id="form">
+                    <legend>Formulario</legend>
+                    <br>
+                    <ol>
+                        <li>
+                            <label for="calificacion1">Dato: </label>
+                            <input type="text" id="calif1" placeholder="First">
+                        </li>
+                        <li>
+                            <label for="calificacion2">Dato: </label>
+                            <input type="text" id="calif2" placeholder="Second">
+                        </li>
+                        <li>
+                            <label for="calificacion3">Dato: </label>
+                            <input type="text" id="calif3" placeholder="Thirst">
+                        </li>
+                    </ol>
+                    <br>
+                    <center>
+                        <button type="button" onclick="comparar()">Ir</button>
+                        <button type="button" onclick="limpiar()">Limpiar</button>
+                    </center>
+                    <br>
+                    <center>
+                        <h2>Promedio</h2>
+                        <div id="resultadoMedia"></div>
+                        <br>
+                        <h2>Estatus</h2>
+                        <div id="resultadoEstatus"></div>
+                        <br>
+                    </center>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

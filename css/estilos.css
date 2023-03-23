@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F1F1F1;
+  font-family: 'Roboto', sans-serif;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+a {
+  color: #222222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.darkmode a{
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+nav {
+  background: #FEFEFE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 5px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+.darkmode nav{
+  background: #14213d;
+}
+
+nav ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+nav .logotipo {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav .enlaces {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+nav .enlaces a {
+  margin-right: 40px;
+}
+
+nav .enlaces a:hover {
+  color: #707070;
+}
+
+#form {
+  border: 1px solid black;
+  width: 350px;
+  margin: auto;
+}
+
+.darkmode #form{
+  border: 1px solid white;
+  width: 350px;
+  margin: auto;
+}
+
+#form legend {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#form ol {
+  list-style: none;
+}
+
+#form ol li {
+  padding-bottom: 5px;
+}
+
+#form ol li label {
+  width: 120px;
+  float: left;
+  text-align: center;
+}
+
+button{
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px;
+  border: none;
+  background: transparent;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+.darkmode button{
+  color: white;
+}
+
+.darkmode button:hover{
+  background-color: white;
+  color: black;
+}
+
+
+
+.estilo{
+  text-align: center;
+  font: black;
+  font-size: 30px;
+  padding: 10px;
+}
+
+body.darkmode{
+  background-color: #14213d;
+  color: white;
+
+}
+
