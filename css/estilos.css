@@ -150,3 +150,66 @@ body.darkmode{
 
 }
 
+/*Diseño de la tabla*/
+
+table{
+  background-color: white;
+  text-align: left;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+.darkmode table{
+  background-color: black;
+  text-align: left;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+th, td{
+  padding: 10px;
+}
+
+thead{
+  background-color: #246355;
+  border-bottom: solid 5px #0F362D;
+  color: white;
+}
+
+.darkmode thead{
+  background-color: #246355;
+  border-bottom: solid 5px #0F362D;
+  color: white;
+}
+
+tr:nth-child(even){
+  background-color: #ddd;
+}
+
+.darkmode tr:nth-child(even){
+  background-color: black;
+}
+
+tr:hover td{
+  background-color: #369681;
+  color: white;
+}
+
+.darkmode tr:hover td{
+  background-color: #369681;
+  color: white;
+}
+
+/*Diseño de los selectores*/
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
