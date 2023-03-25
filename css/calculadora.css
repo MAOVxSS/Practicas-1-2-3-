@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #c8e0f4;
+    display: grid;
+    place-items: center;
+}
+
+body.darkmode {
+    background-color: #031927;
+}
+
+.calculadora {
+    background-color: #BCF4F5;
+    color: #031927;
+    display: grid;
+    width: 400px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+}
+
+.darkmode .calculadora {
+    background-color: #3a506b;
+}
+
+.pantalla {
+    grid-column: 1 / 5;
+    background-color: #508aa8;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600px;
+}
+
+.btn {
+    background-color: #b4ebca;
+    color: #031927;
+    border: 0;
+    padding: 1.7rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.darkmode .btn {
+    background-color: #c8e0f4;
+}
+
+.btn:hover {
+    background-color: #508aa8;
+}
+
+#cero {
+    grid-column: 1 / 3;
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: #e6394a;
+}
+
+#igual:hover {
+    background-color: #e65766;
+}
+
+nav {
+    background: #c8e0f4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 5px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+.darkmode nav {
+    background-color: #031927;
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+nav .enlaces {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dark {
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #031927;
+}
+
+.dark:hover {
+    background-color: #031927;
+    color: white;
+}
+
+.darkmode .dark {
+    color: white;
+}
+
+.darkmode .dark:hover {
+    background-color: #c8e0f4;
+    color: #031927;
+}
+
+/*Boton tipo slider*/
+
+.switch {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch label {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.2s ease;
+}
+
+.switch label .icon {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 25px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.switch label .sun {
+    color: #FFA500;
+}
+
+.switch label .moon {
+    color: #333;
+    transform: translateX(25px);
+}
+
+.switch input:checked+label {
+    background-color: #2196F3;
+}
+
+.switch input:checked+label .icon.sun {
+    transform: translateX(25px);
+}
+
+.switch input:checked+label .icon.moon {
+    transform: translateX(0);
+}
