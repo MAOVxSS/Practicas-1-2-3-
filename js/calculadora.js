@@ -1,3 +1,5 @@
+
+/* !Funciones para el modo oscuro */
 const ibdark = document.getElementById('ibdark');
 let bdark = ibdark.checked;
 const body = document.querySelector('body');

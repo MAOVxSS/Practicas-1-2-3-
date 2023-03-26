@@ -1,0 +1,39 @@
+<!-- !Desafio 2: Memorama - Por Miguel Ortiz Vazquez -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/memorama.css">
+    <!-- ?Este script es para poder agregar los iconos -->
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- ?EL siguiente script es para el mensaje de alerta -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
+    <title>Memorama</title>
+</head>
+
+<body>
+    <div class="switch">
+        <input type="checkbox" id="ibdark">
+        <label for="ibdark">
+            <div class="icon sun"><i class="far fa-sun"></i></div>
+            <div class="icon moon"><i class="far fa-moon"></i></div>
+        </label>
+        <div class="background"></div>
+    </div>
+
+    <div id="tablero">
+    </div>
+    <br>
+    <div class="nuevo-juego" onclick="generarTablero()">
+        Nuevo Juego
+    </div>
+
+    <script src="./js/memorama.js"></script>
+</body>
+
+</html>
