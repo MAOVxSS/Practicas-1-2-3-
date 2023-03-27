@@ -1,11 +1,18 @@
+/* !Declaramos dos variables */
 :root {
+    /* *la etiqueta "calc" nos ayuda a efectuar operaciones matematicas */
+    /* *W se usa para el ancho de las tarjetas, 
+    *le damos el 70% del ancho de la ventana dividio entre 6 que seran las tarjetas a lo ancho*/
     --w: calc(70vw / 6);
+    /* * 4 elementos de alto */
     --h: calc(70vh / 4);
 }
 
+/* !con la etiqueta * le decimos a todos los objetos del HTML*/
 * {
     transition: all 0.5s;
 }
+
 
 body {
     padding: 0;

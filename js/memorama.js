@@ -1,5 +1,5 @@
 
-let cantidadTarjetas = 10;
+let cantidadTarjetas = 14;
 
 let iconos = []
 let selecciones = []

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/todoList.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+    <title>ToDo List</title>
+</head>
+
+<body>
+
+    <div class="switch">
+        <input type="checkbox" id="ibdark">
+        <label for="ibdark">
+            <div class="icon sun"><i class="far fa-sun"></i></div>
+            <div class="icon moon"><i class="far fa-moon"></i></div>
+        </label>
+        <div class="background"></div>
+    </div>
+
+    <div class="list roundBorder">
+        <div class="date">
+            <div class="dateRight">
+                <div id="dateNumber"></div>
+                <div>
+                    <div id="dateMonth"></div>
+                    <div id="dateYear"></div>
+                </div>
+            </div>
+            <div id="dateText"></div>
+        </div>
+        <form onsubmit="addNewTask(event)">
+            <input type="text" name="taskText" autocomplete="off" placeholder="Nueva Tarea" class="roundBorder">
+            <button type="submit" class="addTaskButton">+</button>
+            <button type="button" class="orderButton roundBorder" onclick="renderOrderedTask()">Ordenar</button>
+        </form>
+        <div id="taskContainer"></div>
+    </div>
+    <script src="./js/todoList.js" type="text/javascript" defer></script>
+</body>
+
+</html>
