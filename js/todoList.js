@@ -1,22 +1,9 @@
 // !Sacando la informacion de la fecha
 
-const dateNumber = document.getElementById('dateNumber');
-const dateText = document.getElementById('dateText');
-const dateMonth = document.getElementById('dateMonth');
-const dateYear = document.getElementById('dateYear');
-
 // !Informacion de las tares 
 
 const tasksContainer = document.getElementById('taskContainer');
 // ?Con la siguiente funcion establecemos el dia en las respectivas etiquetas
-
-const setDate = () => {
-    const date = new Date();
-    dateNumber.textContent = date.toLocaleString('es', { day: 'numeric'});
-    dateText.textContent = date.toLocaleString('es', { weekday: 'long'});
-    dateMonth.textContent = date.toLocaleString('es', { month: 'short'});
-    dateYear.textContent = date.toLocaleString('es', { year: 'numeric'});
-}
 
 const addNewTask = event => {
     event.preventDefault();
@@ -46,8 +33,6 @@ const order = () => {
 const renderOrderedTask = () => {
     order().forEach(el => tasksContainer.appendChild(el))
 }
-
-setDate();
 
 /*Funcion para el modo oscuro */
 const ibdark = document.getElementById('ibdark');

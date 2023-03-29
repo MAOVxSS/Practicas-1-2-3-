@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
 })
 // fetching news data from a website providing api
 
-const apiKey = "0ccc3de1108042e69de905399ce3727c"
+const apiKey = "1b13aa1a52c440409ee0647c4ef57dc2"
 
 const fetchData = async (category, pageSize) => {
     const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=${pageSize}&apiKey=${apiKey}`
@@ -71,7 +71,7 @@ const add_newsResults = (data) => {
 const searchNews = () => {
     const query = inputValue.value.trim()
     if (query) {
-        const url = `https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&apiKey=0ccc3de1108042e69de905399ce3727c`
+        const url = `https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&apiKey=${apiKey}`
         fetch(url)
             .then(response => response.json())
             .then(data => add_newsResults(data.articles))

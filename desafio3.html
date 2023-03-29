@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
     <title>ToDo List</title>
 </head>
-
 <body>
-
     <div class="switch">
         <input type="checkbox" id="ibdark">
         <label for="ibdark">
@@ -20,18 +18,10 @@
         </label>
         <div class="background"></div>
     </div>
-
     <div class="list roundBorder">
-        <div class="date">
-            <div class="dateRight">
-                <div id="dateNumber"></div>
-                <div>
-                    <div id="dateMonth"></div>
-                    <div id="dateYear"></div>
-                </div>
-            </div>
-            <div id="dateText"></div>
-        </div>
+        <center>
+            <h2> ToDo List</h2>
+        </center>
         <form onsubmit="addNewTask(event)">
             <input type="text" name="taskText" autocomplete="off" placeholder="Nueva Tarea" class="roundBorder">
             <button type="submit" class="addTaskButton">+</button>

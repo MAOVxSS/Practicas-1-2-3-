@@ -26,7 +26,8 @@ window.addEventListener('scroll', () => {
 })
 // fetching news data from a website providing api
 
-const apiKey = "0ccc3de1108042e69de905399ce3727c"
+// const apiKey = "0ccc3de1108042e69de905399ce3727c"
+const apiKey = "1b13aa1a52c440409ee0647c4ef57dc2"
 
 const fetchData = async (category, pageSize) => {
     const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=${pageSize}&apiKey=${apiKey}`
@@ -34,11 +35,10 @@ const fetchData = async (category, pageSize) => {
     const response = await data.json()
     console.log(response);
     return response.articles
-
 }
 // fetchData('general',5)
 
-//adding breaking news
+//añadir las noticias urgentes
 
 const add_breakingNews = (data) => {
     breakingImg.innerHTML = `<img src=${data[0].urlToImage} alt="image">`
