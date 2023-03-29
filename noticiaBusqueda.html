@@ -27,9 +27,8 @@
             <ul>
                 <li><a href="desafio5.html">Inicio</a></li>
                 <div class="search-container">
-                    <form action="noticiaBusqueda.html">
+                        <input type="text" id="newsQuery" placeholder="Buscar...">
                         <button type="submit" id="searchBtn"><i class="fas fa-search"></i></button>
-                    </form>
                 </div>
                 <li><a href="noticiasDeportes.html">Deportes</a></li>
                 <li><a href="noticiasNegocios.html">Negocios</a></li>
@@ -42,24 +41,17 @@
             </div>
         </nav>
     </div>
+
     <div class="topHeadlines">
-        <div class="left">
-            <div class="title">
-                <h2>De ultimo momento</h2>
-            </div>
-            <div class="img" id="breakingImg"></div>
-            <div class="text" id="breakingNews">
-                <div class="title"></div>
-                <div class="description"></div>
-            </div>
-        </div>
         <div class="right">
             <div class="title">
-                <h2>Titulares</h2>
+                <h2>Resultados de busqueda</h2>
             </div>
-            <div class="topNews"></div>
+            <div class="newsResults"></div>
         </div>
     </div>
+
+
     <div class="footer">
         <div class="box">
             <div class="left">
@@ -95,6 +87,7 @@
                     <div class="email">
                         <input type="email" placeholder="Ingresa tu correo electronico">
                         <button>Suscribirse</button>
+
                     </div>
                 </div>
             </div>
@@ -104,7 +97,7 @@
         </div>
     </div>
 
-    <script src="./js/noticias.js"></script>
+    <script src="./js/busquedaNoticia.js"></script>
 </body>
 
 </html>

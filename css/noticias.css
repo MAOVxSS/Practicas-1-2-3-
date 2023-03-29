@@ -1,4 +1,4 @@
-import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
 
 * {
     margin: 0;
@@ -14,6 +14,10 @@ body {
     min-height: 100vh;
     color: #fff;
     overflow-y: overlay;
+}
+
+body.darkmode {
+    background-color: #c5c5c5;
 }
 
 ::-webkit-scrollbar {
@@ -34,7 +38,7 @@ body {
 }
 
 .topHeadlines .right .topNews::-webkit-scrollbar-thumb {
-    background-color: #777;
+    background-color: #4c5b61;
 }
 
 .topHeadlines .right .newsResults::-webkit-scrollbar {
@@ -42,7 +46,7 @@ body {
 }
 
 .topHeadlines .right .newsResults::-webkit-scrollbar-thumb {
-    background-color: #777;
+    background-color: #4c5b61;
 }
 
 .header {
@@ -50,11 +54,16 @@ body {
     top: 0px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     width: 100%;
-    padding: 5px 0px;
+    padding: 10px 0px;
     background-color: #0b0b11;
     transition: 0.3s;
+}
+
+.darkmode .header {
+    background-color: #2c423f;
+    color: white;
 }
 
 .header.sticky {
@@ -136,6 +145,10 @@ nav ul li a {
     background-color: #a04;
 }
 
+.darkmode .topHeadlines .left .img {
+    background-color: #829191;
+}
+
 .topHeadlines .left .img img {
     width: 100%;
     height: 100%;
@@ -157,6 +170,10 @@ nav ul li a {
     cursor: pointer;
 }
 
+.darkmode .topHeadlines .left .text .title a h2 {
+    color: black;
+}
+
 .topHeadlines .left .text .title a h2:hover {
     text-decoration: underline;
 }
@@ -166,6 +183,10 @@ nav ul li a {
     margin-top: 10px;
     color: #aaa;
     letter-spacing: 1px;
+}
+
+.darkmode .topHeadlines .left .text .description {
+    color: black;
 }
 
 .topHeadlines .right {
@@ -188,12 +209,20 @@ nav ul li a {
     overflow-y: scroll;
 }
 
+.darkmode .topHeadlines .right .topNews {
+    border: 1px solid black;
+}
+
 .topHeadlines .right .newsResults {
     padding: 7px;
     height: 85%;
     border: 1px solid #fff;
     border-radius: 4px;
     overflow-y: scroll;
+}
+
+.darkmode .topHeadlines .right .newsResults {
+    border: 1px solid black;
 }
 
 .topHeadlines .right .topNews .news {
@@ -218,12 +247,20 @@ nav ul li a {
     background-color: #a04;
 }
 
+.darkmode .topHeadlines .right .topNews .news .img {
+    background-color: #829191;
+}
+
 .topHeadlines .right .newsResults .news .img {
     width: 170px;
     height: 100%;
     max-height: 120px;
     min-height: 90px;
     background-color: #a04;
+}
+
+.darkmode .topHeadlines .right .newsResults .news .img {
+    background-color: #829191;
 }
 
 .topHeadlines .right .topNews .news .img img {
@@ -261,9 +298,17 @@ nav ul li a {
     display: inline;
 }
 
+.darkmode .topHeadlines .right .topNews .news .text .title a p {
+    color: black;
+}
+
 .topHeadlines .right .newsResults .news .text .title a p {
     color: #fff;
     display: inline;
+}
+
+.darkmode .topHeadlines .right .newsResults .news .text .title a p {
+    color: black;
 }
 
 .topHeadlines .right .topNews .news .text .title a p:hover {
@@ -279,6 +324,10 @@ nav ul li a {
     background-color: #16161d;
     min-height: 100vh;
     padding: 50px;
+}
+
+.darkmode .page2 {
+    background-color: #c5c5c5;
 }
 
 .page2 .news {
@@ -321,6 +370,10 @@ nav ul li a {
     border-radius: 5px;
 }
 
+.darkmode .page2 .news .newsBox .newsCard .img {
+    background-color: #829191;
+}
+
 .page2 .news .newsBox .newsCard .img img {
     width: 100%;
     height: 100%;
@@ -340,6 +393,10 @@ nav ul li a {
     color: #fff;
     display: inline;
     cursor: pointer;
+}
+
+.darkmode .page2 .news .newsBox .newsCard .text .title a p {
+    color: black;
 }
 
 .page2 .news .newsBox .newsCard .title a p:hover {
@@ -710,4 +767,65 @@ nav ul li a {
 
 .search-container button[type="submit"]:hover {
     color: #ffbb00;
+}
+
+
+/*Boton tipo slider*/
+
+.switch {
+    position: inherit;
+    top: 10px;
+    right: 30px;
+    width: 70px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch label {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.2s ease;
+}
+
+.switch label .icon {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 25px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.switch label .moon {
+    color: #333;
+}
+
+.switch label .sun {
+    color: #FFA500;
+    transform: translateX(25px);
+}
+
+.switch input:checked+label {
+    background-color: #2196F3;
+}
+
+.switch input:checked+label .icon.moon {
+    transform: translateX(30px);
+}
+
+.switch input:checked+label .icon.sun {
+    transform: translateX(0);
 }

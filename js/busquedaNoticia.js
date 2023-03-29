@@ -1,9 +1,3 @@
-
-let breakingImg = document.querySelector('#breakingImg')
-let breakingNews_title = document.querySelector('#breakingNews .title')
-let breakingNews_desc = document.querySelector('#breakingNews .description')
-let topNews = document.querySelector('.topNews')
-
 let header = document.querySelector('.header')
 let toggleMenu = document.querySelector('.bar')
 let menu = document.querySelector('nav ul')
@@ -36,18 +30,17 @@ const fetchData = async (category, pageSize) => {
     return response.articles
 
 }
-// fetchData('general',5)
 
-//adding breaking news
+//!Busqueda de noticias
 
-const add_breakingNews = (data) => {
-    breakingImg.innerHTML = `<img src=${data[0].urlToImage} alt="image">`
-    breakingNews_title.innerHTML = `<a href=${data[0].url} target="_blank"><h2>${data[0].title}</h2></a>`
-    breakingNews_desc.innerHTML = `${data[0].description}`
-}
-fetchData('general', 5).then(add_breakingNews)
+const searchBtn = document.getElementById("searchBtn");
 
-const add_topNews = (data) => {
+const inputValue = document.getElementById("newsQuery");
+
+const newsResults = document.querySelector('.newsResults')
+
+// función para agregar las noticias encontradas
+const add_newsResults = (data) => {
     let html = ''
     let title = ''
     data.forEach((element) => {
@@ -69,10 +62,24 @@ const add_topNews = (data) => {
                     </div>
                 </div>`
     })
-    topNews.innerHTML = html
+    newsResults.innerHTML = html
 }
-fetchData('general', 5).then(add_topNews)
-// fetchData('sports', 5).then(add_sportsNews)
+//fetchData('general', 3).then(add_newsResults)
+
+
+// función para buscar noticias
+const searchNews = () => {
+    const query = inputValue.value.trim()
+    if (query) {
+        const url = `https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&apiKey=0ccc3de1108042e69de905399ce3727c`
+        fetch(url)
+            .then(response => response.json())
+            .then(data => add_newsResults(data.articles))
+            .catch(error => console.log(error))
+    }
+}
+// agregamos el evento al botón de búsqueda
+searchBtn.addEventListener('click', searchNews)
 
 //!Funcion para el modo oscuro
 const ibdark = document.getElementById('ibdark');

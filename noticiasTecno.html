@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/noticias.css">
+    <title>Noticias Deportes</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="switch">
+            <input type="checkbox" id="ibdark">
+            <label for="ibdark">
+                <div class="icon moon"><i class="far fa-moon"></i></div>
+                <div class="icon sun"><i class="far fa-sun"></i></div>
+            </label>
+            <div class="background"></div>
+        </div>
+        <div class="logo">
+            El Deforma
+        </div>
+        <nav>
+            <ul>
+                <li><a href="desafio5.html">Inicio</a></li>
+                <div class="search-container">
+                    <form action="noticiaBusqueda.html">
+                        <button type="submit" id="searchBtn"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <li><a href="noticiasDeportes.html">Deportes</a></li>
+                <li><a href="noticiasNegocios.html">Negocios</a></li>
+                <li><a href="noticiasTecno.html">Tecnologia</a></li>
+                <li><a href="#">         </a></li>
+            </ul>
+            <div class="bar">
+                <i class="open fa-solid fa-bars-staggered"></i>
+                <i class="close fa-solid fa-xmark"></i>
+            </div>
+        </nav>
+    </div>
+    <div class="page2">
+        <div class="news" id="techNews">
+            <div class="title">
+                <h2>Noticias sobre Tecnologia</h2>
+            </div>
+            <div class="newsBox">
+            </div>
+            <div class="search-container">
+                <center>
+                    <button type="submit" id="prevBtn"><i class="fas fa-arrow-circle-left"></i></button>
+                    <button type="submit" id="nextBtn"><i class="fas fa-arrow-circle-right"></i></button>
+                </center>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="box">
+                <div class="left">
+                    <div class="categories">
+                        <p>Categorias</p>
+                        <div>
+                            <p>Deportes</p>
+                        </div>
+                        <div>
+                            <p>Negocios</p>
+                        </div>
+                        <div>
+                            <p>Tecnologia</p>
+                        </div>
+                    </div>
+                    <div class="contactUs">
+                        <div class="contact">
+                            <p>Contactanos</p>
+                            <div>Numero Telefonico: <span>55-81-90-78-90</span></div>
+                            <div>Correo Electronico: <span>deforma@news.com</span></div>
+                            <div>Direccion - <span>CDMX, México</span></div>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="newsletter">
+                        <p>Suscribete para recibir noticias diaramente</p>
+                        <div class="email">
+                            <input type="email" placeholder="Ingresa tu correo electronico">
+                            <button>Suscribirse</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyrights">
+                Todos los derechos reservados &copy; 2023 MAOV
+            </div>
+        </div>
+
+        <script src="./js/noticiasTecno.js"></script>
+</body>
+
+</html>
